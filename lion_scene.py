@@ -1,7 +1,7 @@
-from shapes import Triangle
-from base import BaseScene, Color
+from src.shapes import Triangle
+from src.base import BaseScene, Color
 
-# class name should be Scene
+# class name should be "Scene"
 class Scene(BaseScene):
     def __init__(self):
         super().__init__("Lion Scene")

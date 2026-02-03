@@ -1,5 +1,5 @@
-from base import BaseScene, Color
-from shapes import Circle
+from src.base import BaseScene, Color
+from src.shapes import Circle
 
 # class name should be Scene
 class Scene(BaseScene):

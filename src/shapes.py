@@ -1,4 +1,4 @@
-from base import Shape
+from .base import Shape
 
 class Circle(Shape):
     def __init__(self, center, radius):

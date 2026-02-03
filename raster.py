@@ -35,16 +35,15 @@ def main(args):
                 image[j, i] = [color.r, color.g, color.b]
                 break  # Stop at the first primitive that contains the point
 
-    # invert lines for correct orientation
-    image = np.flipud(image)
     # save image as png using matplotlib
-    plt.imsave("output.png", image, vmin=0, vmax=1)
+    plt.imsave(args.output, image, vmin=0, vmax=1, origin='lower')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Raster module main function")
     parser.add_argument('-s', '--scene', type=str, help='Scene name', default='mickey_scene')
     parser.add_argument('-w', '--window', type=float, nargs=4, help='Window: xmin xmax ymin ymax', default=[0, 8.0, 0, 6.0])
     parser.add_argument('-r', '--resolution', type=int, nargs=2, help='Resolution: width height', default=[800, 600])
+    parser.add_argument('-o', '--output', type=str, help='Output file name', default='output.png')
     args = parser.parse_args()
 
     main(args)
