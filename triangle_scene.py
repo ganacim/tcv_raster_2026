@@ -1,5 +1,5 @@
-from base import BaseScene, Color
-from shapes import Triangle
+from src.base import BaseScene, Color
+from src.shapes import Triangle
 
 # class name should be Scene
 class Scene(BaseScene):
